@@ -51,12 +51,16 @@
 
 .header__optionLineOne {
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 400;
+  text-decoration: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .header__optionLineTwo {
   font-size: 14px;
-  font-weight: 1000;
+  font-weight: 500;
+  text-decoration: none !important;
 }
 
 .header__optionBasket {

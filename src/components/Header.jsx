@@ -18,7 +18,7 @@ const handleAuthentication = () => {
 
     return (
         <div className='header'>
-            <Link to='/'>
+            <Link to='/' style={{textDecoration: 'none'}}>
             <img className='header__logo' src='https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png' ></img>
             </Link>
             <div className='header__search'>
@@ -26,9 +26,9 @@ const handleAuthentication = () => {
                 <SearchIcon className="header__searchIcon" />
             </div>
             <div className='header__nav'>
-                <Link to={!user && '/login'}>
+                <Link to={!user && '/login'} style={{textDecoration: 'none'}}>
                 <div onClick={handleAuthentication} className='header__option'>
-                    <span className='header__optionLineOne'>Hello</span>
+                    <span className='header__optionLineOne'>Hello {!user ? 'Guest' : user.email}</span>
                     <span className='header__optionLineTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
                 </Link>
