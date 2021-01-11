@@ -17,9 +17,9 @@ const handleAuthentication = () => {
 
 
     return (
-        <div className='header'>
+        <div className='header' style={{textDecoration: 'none'}}>
             <Link to='/' style={{textDecoration: 'none'}}>
-            <img className='header__logo' src='https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png' ></img>
+            <img className='header__logo' src='https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png' alt='' ></img>
             </Link>
             <div className='header__search'>
                 <input className='header__searchInput' type='text'></input>
@@ -32,18 +32,20 @@ const handleAuthentication = () => {
                     <span className='header__optionLineTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
                 </Link>
+                <Link to='/orders' style={{textDecoration: 'none'}}>
                 <div className='header__option'>
                     <span className='header__optionLineOne'>Return</span>
                     <span className='header__optionLineTwo'>Orders</span>
                 </div>
+                </Link>
                 <div className='header__option'>
                     <span className='header__optionLineOne'>Your</span>
                     <span className='header__optionLineTwo'>Prime</span>
                 </div>
-               <Link to='/checkout'>
-               <div className='header__optionBasket'>
+               <Link to='/checkout' style={{textDecoration: 'none'}}>
+               <div className='header__optionBasket' >
                     <ShoppingBasketIcon />
-                    <span className='header__optionLineTwo header__basketCount'>{basket?.length}</span>
+                    <span className='header__optionLineTwo header__basketCount' style={{textDecoration: 'none'}}>{basket?.length}</span>
                 </div>
                </Link>
             </div>

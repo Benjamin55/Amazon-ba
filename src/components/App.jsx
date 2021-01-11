@@ -12,7 +12,8 @@ import { Elements } from '@stripe/react-stripe-js';
 import Orders from './Orders';
 
 
-const promise = loadStripe('pk_test_51I2EW9JJBvgEwazlAUP1rdMHbco4FsspcecU7PGdJ6Ahoy3qTaoPWXXkBzPKJErAYEcye6w8014BvuZKwVHAk8tP00L02eGAot')
+const promise = loadStripe('pk_test_51I2EW9JJBvgEwazlAUP1rdMHbco4FsspcecU7PGdJ6Ahoy3qTaoPWXXkBzPKJErAYEcye6w8014BvuZKwVHAk8tP00L02eGAot');
+
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
 
 
     useEffect(() => {
-        auth.onAuthStateChanged(authUser => {
+        auth.onAuthStateChanged((authUser) => {
             if(authUser) {
                 dispatch({
                     type: 'SET_USER',

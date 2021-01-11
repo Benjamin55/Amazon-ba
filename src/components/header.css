@@ -67,6 +67,7 @@
   display: flex;
   align-items: center;
   color: white;
+  text-decoration: none !important;
 }
 
 .header__basketCount {

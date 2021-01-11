@@ -7,6 +7,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../reducer';
 import axios from '../axios';
+import { db } from '../firebase';
 
 function Payment() {
 
@@ -36,6 +37,8 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
+    console.log('tehe secret code //////', clientSecret)
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setProcessing(true);
@@ -45,6 +48,19 @@ function Payment() {
                 card: elements.getElement(CardElement)
             }
         }).then(({ paymentIntent }) => {
+
+            db
+            .collection('users')
+            .doc(user?.uid)
+            .collection('orders')
+            .doc(paymentIntent.id)
+            .set({
+                basket: basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
+
+
             setSucceeded(true);
             setError(null);
             setProcessing(false);
@@ -60,7 +76,7 @@ function Payment() {
 
     const handleChange = event => {
         setDisabled(event.empty);
-        setError(event.error ? event.error.message : '');
+        setError(event.error ? event.error.message : "");
 
     }
 
@@ -119,11 +135,14 @@ function Payment() {
                                         thousandSeparator={true}
                                         prefix={'$'}
                                     />
-                                    <button disabled={processing || disabled || succeeded}></button>
-                                    <span>{processing ? <p>Processing</p> : 'Buy Now'}</span>
+                                    <button disabled={processing || disabled || succeeded}>
+                                        <span>{processing ? <p>Processing</p> : 'Buy Now'}</span>
+                                    </button>
+                                    
                                 </div>
 
                                 {error && <div>{error}</div>}
+                                
                             </form>
 
                     </div>
