@@ -9,10 +9,10 @@ function Order({ order }) {
     return (
         <div className='order'>
             <h2>Order</h2>
-            <p>{moment.unix(order.data.created).format('YYYY-MM-DD')}</p>
-            <div className="order__id">
+            <p>{moment.unix(order.data.created).format('MMMM Do YYYYY, h:mma')}</p>
+            <p className="order__id">
                 <small>{order.id}</small>
-            </div>
+            </p>
             {order.data.basket?.map(item => (
                 <CheckoutProduct 
                     id={item.id}
@@ -20,7 +20,7 @@ function Order({ order }) {
                     image={item.image}
                     price={item.price}
                     rating={item.rating}
-                    
+                    hideButton
                 />
             ))}
             
