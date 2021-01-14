@@ -38,8 +38,9 @@ function Login() {
 
     return (
         <div className='login'>
-            <Link to='/'>
-            <img className='login__logo' src='https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png' ></img>
+            <Link to='/' style={{textDecoration:'none'}}>
+                <h3 className='login__name' >Webshop</h3>
+            {/* <img className='login__logo' src='https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png' ></img> */}
             </Link>
 
             <div className="login__container">

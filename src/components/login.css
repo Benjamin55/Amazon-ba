@@ -6,13 +6,12 @@
   background-color: white;
 }
 
-.login__logo {
+.login__name {
   margin-top: 20px;
   margin-bottom: 20px;
-  object-fit: contain;
-  width: 100px;
-  margin-right: auto;
-  margin-left: auto;
+  color: black;
+
+  font-size: 30px;
 }
 
 .login__container {

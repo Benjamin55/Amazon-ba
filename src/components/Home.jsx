@@ -11,21 +11,21 @@ function Home() {
             <div className="div home__row">
                <Product 
                id='0'
-               title='the lean startup'
+               title='Product 1'
                price={29.99}
                image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
                rating={3}
                 /> 
                <Product 
                id='1'
-               title='the lean startup'
+               title='Product 2'
                price={29.99}
                image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
                rating={4}
                 /> 
                 <Product 
                id='2'
-               title='the lean startup, macbok notebook new arerotoe'
+               title='Product 3'
                price={29.99}
                image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
                rating={1}
@@ -34,23 +34,41 @@ function Home() {
             <div className="div home__row">
             <Product 
                id='3'
-               title='the lean startup'
+               title='Product 4'
                price={29.99}
                image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
                rating={3}
                 /> 
                <Product 
                id='4'
-               title='the lean startup'
+               title='Product 5'
                price={29.99}
                image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
                rating={2}
                 /> 
             </div>
             <div className="div home__row">
-               <Product /> 
-               <Product /> 
-               <Product /> 
+            <Product 
+               id='5'
+               title='Product 6'
+               price={29.99}
+               image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
+               rating={3}
+                /> 
+               <Product 
+               id='6'
+               title='Product 7'
+               price={29.99}
+               image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
+               rating={4}
+                /> 
+                <Product 
+               id='7'
+               title='Product 8'
+               price={29.99}
+               image="https://media.4rgos.it/s/Argos/8816155_R_SET?$Main768$&w=620&h=620"
+               rating={1}
+                /> 
             </div>
           </div>
         </div>

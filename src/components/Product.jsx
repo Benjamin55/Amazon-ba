@@ -3,9 +3,9 @@ import React from 'react';
 import './product.css'
 import { useStateValue } from '../StateProvider';
 
-function Product({id, title, price, rating, image }) {
+function Product({id, title, price, rating, image, hideButton }) {
 
-    const [{basket}, dispatch] = useStateValue();
+    const [{user, basket}, dispatch] = useStateValue();
 
     const addToBasket = () => {
         dispatch ({
@@ -35,9 +35,9 @@ function Product({id, title, price, rating, image }) {
                    
                 </div>
             </div>
-            <img src={image} alt='' />
-
+            <img src={image} alt='img' />
             <button onClick={addToBasket}>Add to basket</button>
+               
         </div>
     )
 }

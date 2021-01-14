@@ -35,9 +35,9 @@ function Payment() {
         }
 
         getClientSecret();
+       
     }, [basket])
 
-    console.log('tehe secret code //////', clientSecret)
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -73,7 +73,7 @@ function Payment() {
         })
 
     }
-
+   
     const handleChange = event => {
         setDisabled(event.empty);
         setError(event.error ? event.error.message : "");
@@ -123,7 +123,7 @@ function Payment() {
                     <div className="payment__details">
                             <form onSubmit={handleSubmit}>
                                 <CardElement onChange={handleChange} />
-
+                                
                                 <div className='payment__priceContainer'>
                                     <CurrencyFormat 
                                         renderText={(value) => (
@@ -134,6 +134,8 @@ function Payment() {
                                         displayType={'text'}
                                         thousandSeparator={true}
                                         prefix={'$'}
+                                        billingAddress={true}
+                                        shippingAddress={true}
                                     />
                                     <button disabled={processing || disabled || succeeded}>
                                         <span>{processing ? <p>Processing</p> : 'Buy Now'}</span>

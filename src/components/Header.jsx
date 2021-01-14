@@ -19,7 +19,8 @@ const handleAuthentication = () => {
     return (
         <div className='header' style={{textDecoration: 'none'}}>
             <Link to='/' style={{textDecoration: 'none'}}>
-            <img className='header__logo' src='https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png' alt='' ></img>
+                <h3 className='header__name'>Webshop</h3>
+            {/* <img className='header__logo' src='https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png' alt='' ></img> */}
             </Link>
             <div className='header__search'>
                 <input className='header__searchInput' type='text'></input>
